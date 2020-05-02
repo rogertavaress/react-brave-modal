@@ -2,7 +2,7 @@
   "name": "react-brave-modal",
   "version": "0.0.1",
   "description": "React Brave Modal is a react hook that shows modals on the screen in an easy way.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/rogertavaress/react-brave-modal"
@@ -13,20 +13,27 @@
   "author": {
     "name": "Rogério Tavares",
     "email": "rogerioctf@gmail.com",
-    "url": "https://rogertavaress.github.io/"
+    "url": "https://rogertavaress.github.io"
   },
   "scripts": {
-    "build": "babel src --out-dir .",
-    "bump": "npm version",
-    "prepublishOnly": "yarn build",
-    "watch": "nodemon --watch src --exec \"yarn build\""
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "@babel/preset-react": "^7.9.4",
-    "nodemon": "^2.0.2"
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "7.9.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "babel-loader": "8.1.0",
+    "typescript": "^3.7.5"
   },
   "keywords": [
     "react",
@@ -35,5 +42,9 @@
     "brave",
     "modal"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
