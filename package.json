@@ -1,0 +1,39 @@
+{
+  "name": "react-brave-modal",
+  "version": "0.0.1",
+  "description": "React Brave Modal is a react hook that shows modals on the screen in an easy way.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rogertavaress/react-brave-modal"
+  },
+  "bugs": {
+    "url": "https://github.com/rogertavaress/react-brave-modal/issues"
+  },
+  "author": {
+    "name": "Rogério Tavares",
+    "email": "rogerioctf@gmail.com",
+    "url": "https://rogertavaress.github.io/"
+  },
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "bump": "npm version",
+    "prepublishOnly": "yarn build",
+    "watch": "nodemon --watch src --exec \"yarn build\""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "nodemon": "^2.0.2"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "brave",
+    "modal"
+  ],
+  "license": "MIT"
+}
