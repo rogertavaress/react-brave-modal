@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const appearContainer = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -10,4 +19,5 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
+  animation: ${appearContainer} 0.2s;
 `;

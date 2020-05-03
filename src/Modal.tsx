@@ -3,7 +3,6 @@ import React, { createContext, useContext, useCallback, useState } from 'react';
 import ModalContainer from './components';
 
 export interface ModalProps {
-  show: boolean;
   type?: string;
   data?: React.FC | null;
 }
@@ -16,23 +15,23 @@ interface ModalContextData {
 const ModalContext = createContext<ModalContextData>({} as ModalContextData);
 
 export const ModalProvider: React.FC = ({ children }) => {
+  const [show, setShow] = useState(false);
   const [modal, setModal] = useState<ModalProps>({} as ModalProps);
 
-  const showModal = useCallback(
-    ({ show = false, type = '', data = null }: ModalProps) => {
-      setModal({ show, type, data });
-    },
-    [],
-  );
+  const showModal = useCallback(({ type = '', data = null }: ModalProps) => {
+    setModal({ type, data });
+    setShow(true);
+  }, []);
 
   const closeModal = useCallback(() => {
-    setModal({ show: false, data: null });
+    setModal({ type: '', data: null });
+    setShow(false);
   }, []);
 
   return (
     <ModalContext.Provider value={{ showModal, closeModal }}>
       {children}
-      <ModalContainer newProps={modal} />
+      <ModalContainer newProps={modal} show={show} />
     </ModalContext.Provider>
   );
 };

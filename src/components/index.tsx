@@ -1,21 +1,25 @@
 import React from 'react';
-import { useTransition } from 'react-spring';
 
 import SimpleModal from './Simple';
 
-import { ModalProps } from '..';
+import { ModalProps } from '../Modal';
 
 import { Container } from './styles';
 
 interface ModelContainerProps {
   newProps: ModalProps;
+  show: boolean;
 }
 
-const ModelContainer: React.FC<ModelContainerProps> = ({ newProps }) => {
+const ModelContainer: React.FC<ModelContainerProps> = ({ newProps, show }) => {
   return (
-    <Container>
-      <SimpleModal>{newProps.data}</SimpleModal>
-    </Container>
+    <>
+      {show && (
+        <Container>
+          <SimpleModal>{newProps.data}</SimpleModal>
+        </Container>
+      )}
+    </>
   );
 };
 

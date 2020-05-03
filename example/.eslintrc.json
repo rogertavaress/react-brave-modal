@@ -30,7 +30,6 @@
   ],
   "rules": {
     "prettier/prettier": "error",
-    "import/no-unresolved": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-one-expression-per-line": "off",
