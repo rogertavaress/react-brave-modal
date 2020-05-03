@@ -4,14 +4,14 @@ import React from 'react';
 
 import {useModal} from '../../../../';
 
-const Dashboard: React.FC = () => {
+const Home: React.FC = () => {
   const {showModal} = useModal();
 
   return (
   <>
-    <h1>Dashboard</h1>
+    <h1>Home</h1>
     <button type="button" onClick={()=>showModal({ data:null, type:'simple'})}>Show</button>
   </>);
 };
 
-export default Dashboard;
+export default Home;
