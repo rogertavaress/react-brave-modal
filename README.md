@@ -49,15 +49,15 @@ Abaixo mostro um exemplo de como fazer
 
     import React from  'react';
 	import { BrowserRouter } from  'react-router-dom';
-	**import { ModalProvider } from  'react-brave-modal';**
+	import { ModalProvider } from  'react-brave-modal'; // Importação do módulo
 	
 	import Routes from  './routes';
 
 	const  App:  React.FC  = () => (
 		<BrowserRouter>
-			**<ModalProvider>**
+			<ModalProvider> // Acrescentando o Provider por volta de todas as rotas
 				<Routes  />
-			**</ModalProvider>**
+			</ModalProvider>
 		</BrowserRouter>
 	);
 	
