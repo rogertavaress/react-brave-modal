@@ -1,12 +1,13 @@
 import React, { createContext, useContext, useCallback, useState } from 'react';
 
 import ModalContainer from './components';
+import Empty from './components/Empty';
 
 export interface ModalProps {
   type?: string;
-  data?: React.FC | null;
   title?: string;
   text?: string;
+  data?: React.FC;
 }
 
 interface ModalContextData {
@@ -19,21 +20,23 @@ const ModalContext = createContext<ModalContextData>({} as ModalContextData);
 export const ModalProvider: React.FC = ({ children }) => {
   const [show, setShow] = useState(false);
   const [modal, setModal] = useState<ModalProps>({} as ModalProps);
+  const [data, setData] = useState<React.FC>(Empty);
 
-  const showModal = useCallback(({ type = 'simple', data = null, text = '', title = '' }: ModalProps) => {
-    setModal({ type, data, text, title });
+  const showModal = useCallback(({ type = 'simple', data = Empty, text = '', title = '' }: ModalProps) => {
+    setModal({ type, text, title });
     setShow(true);
+    setData(data);
   }, []);
 
   const closeModal = useCallback(() => {
-    setModal({ type: '', data: null, text: '', title: '' });
+    setModal({ type: '', data: Empty, text: '', title: '' });
     setShow(false);
   }, []);
 
   return (
     <ModalContext.Provider value={{ showModal, closeModal }}>
       {children}
-      <ModalContainer newProps={modal} show={show} />
+      <ModalContainer newProps={modal} show={show} data={data} />
     </ModalContext.Provider>
   );
 };

@@ -14,14 +14,14 @@ const appearContentArea = keyframes`
 `;
 
 export const Content = styled.div`
-  padding: 20px;
   color: #000;
 
   h2 {
+    padding: 20px 20px 0;
   }
 
   p {
-    margin: 15px 0;
+    padding: 15px 20px 20px;
   }
 `;
 

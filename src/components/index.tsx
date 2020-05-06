@@ -10,9 +10,10 @@ import { Container, Fundo } from './styles';
 interface ModelContainerProps {
   newProps: ModalProps;
   show: boolean;
+  data: React.FC;
 }
 
-const ModelContainer: React.FC<ModelContainerProps> = ({ newProps, show }) => {
+const ModelContainer: React.FC<ModelContainerProps> = ({ newProps, show, data }) => {
   const { closeModal } = useModal();
 
   return (
@@ -21,12 +22,12 @@ const ModelContainer: React.FC<ModelContainerProps> = ({ newProps, show }) => {
         <Container>
           {newProps.type === 'simple' && (
             <SimpleModal title={newProps.title} text={newProps.text}>
-              {newProps.data}
+              {data}
             </SimpleModal>
           )}
           {newProps.type === 'full' && (
             <FullModal title={newProps.title} text={newProps.text}>
-              {newProps.data}
+              {data}
             </FullModal>
           )}
 

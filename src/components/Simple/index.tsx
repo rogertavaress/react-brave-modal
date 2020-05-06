@@ -19,8 +19,8 @@ const SimpleModal: React.FC<ModalProps> = ({ children, title, text }) => {
         <FiX size={15} />
       </button>
       <Content>
-        <h2>{title}</h2>
-        <p>{text}</p>
+        {title && <h2>{title}</h2>}
+        {text && <p>{text}</p>}
         {children}
       </Content>
     </ContentArea>

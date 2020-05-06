@@ -11,6 +11,11 @@ export const Container = styled.div`
     margin-bottom:20px;
   }
 
+  h2 {
+    margin-top: 30px;
+    margin-bottom:15px;
+  }
+
   div {
     display: flex;
 
