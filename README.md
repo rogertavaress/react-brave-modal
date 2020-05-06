@@ -32,7 +32,14 @@ O RBM pode criar modals usando react hooks no ReactJS de uma forma bastante simp
 
 O primeiro passo é instalar o nosso pacote no seu package.json com o comando abaixo
 
-    npm i react-brave-modal    
+Via NPM
+```bash
+npm i react-brave-modal    
+```
+Via Yarn
+```bash
+yarn add react-brave-modal
+```
 
 ## :space_invader: Como implementar?
 
