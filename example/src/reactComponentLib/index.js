@@ -25,35 +25,39 @@ function __makeTemplateObject(cooked, raw) {
 }
 
 var appearContentArea = keyframes(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  from {\n    top: -100vh;\n  }\n  to {\n    top: 0px;\n  }\n  leaves {\n    top: 100vh;\n  }\n"], ["\n  from {\n    top: -100vh;\n  }\n  to {\n    top: 0px;\n  }\n  leaves {\n    top: 100vh;\n  }\n"])));
-var Content = styled.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  color: #000;\n"], ["\n  color: #000;\n"])));
-var ContentArea = styled(animated.div)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  position: relative;\n  background: white;\n  max-width: 500px;\n  max-height: 80vh;\n  border-radius: 5px;\n  box-sizing: border-box;\n  animation: ", " 1s;\n  overflow: auto;\n\n  & > button {\n    display: flex;\n    position: absolute;\n    top: 10px;\n    right: 5px;\n    border: 0;\n    background: transparent;\n    cursor: pointer;\n    justify-content: center;\n    align-items: center;\n\n    svg {\n      color: rgba(0, 0, 0, 0.7);\n    }\n  }\n"], ["\n  position: relative;\n  background: white;\n  max-width: 500px;\n  max-height: 80vh;\n  border-radius: 5px;\n  box-sizing: border-box;\n  animation: ", " 1s;\n  overflow: auto;\n\n  & > button {\n    display: flex;\n    position: absolute;\n    top: 10px;\n    right: 5px;\n    border: 0;\n    background: transparent;\n    cursor: pointer;\n    justify-content: center;\n    align-items: center;\n\n    svg {\n      color: rgba(0, 0, 0, 0.7);\n    }\n  }\n"])), appearContentArea);
+var Content = styled.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  padding: 20px;\n  color: #000;\n\n  h2 {\n  }\n\n  p {\n    margin: 15px 0;\n  }\n"], ["\n  padding: 20px;\n  color: #000;\n\n  h2 {\n  }\n\n  p {\n    margin: 15px 0;\n  }\n"])));
+var ContentArea = styled(animated.div)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  position: relative;\n  background: white;\n  width: 500px;\n  max-height: 80vh;\n  border-radius: 5px;\n  box-sizing: border-box;\n  animation: ", " 1s;\n  overflow: auto;\n\n  & > button {\n    display: flex;\n    position: absolute;\n    top: 10px;\n    right: 5px;\n    border: 0;\n    background: transparent;\n    cursor: pointer;\n    justify-content: center;\n    align-items: center;\n\n    svg {\n      color: rgba(0, 0, 0, 0.7);\n    }\n  }\n"], ["\n  position: relative;\n  background: white;\n  width: 500px;\n  max-height: 80vh;\n  border-radius: 5px;\n  box-sizing: border-box;\n  animation: ", " 1s;\n  overflow: auto;\n\n  & > button {\n    display: flex;\n    position: absolute;\n    top: 10px;\n    right: 5px;\n    border: 0;\n    background: transparent;\n    cursor: pointer;\n    justify-content: center;\n    align-items: center;\n\n    svg {\n      color: rgba(0, 0, 0, 0.7);\n    }\n  }\n"])), appearContentArea);
 var templateObject_1, templateObject_2, templateObject_3;
 
 var SimpleModal = function (_a) {
-    var children = _a.children;
+    var children = _a.children, title = _a.title, text = _a.text;
     var closeModal = useModal().closeModal;
     return (React.createElement(ContentArea, null,
         React.createElement("button", { type: "button", onClick: function () { return closeModal(); } },
             React.createElement(FiX, { size: 15 })),
         React.createElement(Content, null,
-            React.createElement("p", null, "adasdasdasd asdasdas dasdasda sdadsa sdasdasdasd asdasdas dasdasdas dasdasd adasdasdasd asdasdas dasdasdasdadsa sdasdasdasd asdasdas dasdasdasdasdasd adasdasdasd asdasdas dasdasdasdadsa sdasdasdasd asdasdas dasdasdasdasdasd adasdasdasd asdasdas dasda sdasdadsa sdasdasdasd asdasdas dasdasd asdasdasd adasdasdasd dasdasdasdadsa sdasdasdasd asdasdas dasdasdasdasdasd adasdasdasd asdasdas dasdasdasdadsa sdasdasdasd asdasdas dasdasdasdasdasd"),
+            React.createElement("h2", null, title),
+            React.createElement("p", null, text),
             children)));
 };
 
 var appearContentArea$1 = keyframes(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  from {\n    top: -100vh;\n  }\n  to {\n    top: 0px;\n  }\n  leaves {\n    top: 100vh;\n  }\n"], ["\n  from {\n    top: -100vh;\n  }\n  to {\n    top: 0px;\n  }\n  leaves {\n    top: 100vh;\n  }\n"])));
 var templateObject_1$1;
 
-var Content$1 = styled.div(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  color: #000;\n"], ["\n  color: #000;\n"])));
+var Content$1 = styled.div(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  padding: 30px;\n  color: #000;\n  @media (max-width: 250px) {\n    padding: 30px 15px;\n  }\n\n  h2 {\n  }\n\n  p {\n    margin: 15px 0;\n  }\n"], ["\n  padding: 30px;\n  color: #000;\n  @media (max-width: 250px) {\n    padding: 30px 15px;\n  }\n\n  h2 {\n  }\n\n  p {\n    margin: 15px 0;\n  }\n"])));
 var ContentArea$1 = styled(animated.div)(templateObject_2$1 || (templateObject_2$1 = __makeTemplateObject(["\n  position: relative;\n  background: white;\n  width: 100vw;\n  height: 100vh;\n  border-radius: 5px;\n  box-sizing: border-box;\n  animation: ", " 1s;\n  overflow: auto;\n\n  & > button {\n    display: flex;\n    position: absolute;\n    top: 10px;\n    right: 5px;\n    border: 0;\n    background: transparent;\n    cursor: pointer;\n    justify-content: center;\n    align-items: center;\n\n    svg {\n      color: rgba(0, 0, 0, 0.7);\n    }\n  }\n"], ["\n  position: relative;\n  background: white;\n  width: 100vw;\n  height: 100vh;\n  border-radius: 5px;\n  box-sizing: border-box;\n  animation: ", " 1s;\n  overflow: auto;\n\n  & > button {\n    display: flex;\n    position: absolute;\n    top: 10px;\n    right: 5px;\n    border: 0;\n    background: transparent;\n    cursor: pointer;\n    justify-content: center;\n    align-items: center;\n\n    svg {\n      color: rgba(0, 0, 0, 0.7);\n    }\n  }\n"])), appearContentArea$1);
 var templateObject_1$2, templateObject_2$1;
 
 var FullModal = function (_a) {
-    var children = _a.children;
+    var children = _a.children, title = _a.title, text = _a.text;
     var closeModal = useModal().closeModal;
     return (React.createElement(ContentArea$1, null,
         React.createElement("button", { type: "button", onClick: function () { return closeModal(); } },
             React.createElement(FiX, { size: 20 })),
-        React.createElement(Content$1, null, children)));
+        React.createElement(Content$1, null,
+            React.createElement("h2", null, title),
+            React.createElement("p", null, text),
+            children)));
 };
 
 var appearContainer = keyframes(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"], ["\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"])));
@@ -67,8 +71,8 @@ var ModelContainer = function (_a) {
     var newProps = _a.newProps, show = _a.show;
     var closeModal = useModal().closeModal;
     return (React.createElement(React.Fragment, null, show && (React.createElement(Container, null,
-        newProps.type === 'simple' && React.createElement(SimpleModal, null, newProps.data),
-        newProps.type === 'full' && React.createElement(FullModal, null, newProps.data),
+        newProps.type === 'simple' && (React.createElement(SimpleModal, { title: newProps.title, text: newProps.text }, newProps.data)),
+        newProps.type === 'full' && (React.createElement(FullModal, { title: newProps.title, text: newProps.text }, newProps.data)),
         React.createElement(Fundo, { onClick: function () {
                 closeModal();
             } })))));
@@ -80,12 +84,12 @@ var ModalProvider = function (_a) {
     var _b = useState(false), show = _b[0], setShow = _b[1];
     var _c = useState({}), modal = _c[0], setModal = _c[1];
     var showModal = useCallback(function (_a) {
-        var _b = _a.type, type = _b === void 0 ? '' : _b, _c = _a.data, data = _c === void 0 ? null : _c;
-        setModal({ type: type, data: data });
+        var _b = _a.type, type = _b === void 0 ? 'simple' : _b, _c = _a.data, data = _c === void 0 ? null : _c, _d = _a.text, text = _d === void 0 ? '' : _d, _e = _a.title, title = _e === void 0 ? '' : _e;
+        setModal({ type: type, data: data, text: text, title: title });
         setShow(true);
     }, []);
     var closeModal = useCallback(function () {
-        setModal({ type: '', data: null });
+        setModal({ type: '', data: null, text: '', title: '' });
         setShow(false);
     }, []);
     return (React.createElement(ModalContext.Provider, { value: { showModal: showModal, closeModal: closeModal } },

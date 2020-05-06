@@ -19,8 +19,16 @@ const ModelContainer: React.FC<ModelContainerProps> = ({ newProps, show }) => {
     <>
       {show && (
         <Container>
-          {newProps.type === 'simple' && <SimpleModal>{newProps.data}</SimpleModal>}
-          {newProps.type === 'full' && <FullModal>{newProps.data}</FullModal>}
+          {newProps.type === 'simple' && (
+            <SimpleModal title={newProps.title} text={newProps.text}>
+              {newProps.data}
+            </SimpleModal>
+          )}
+          {newProps.type === 'full' && (
+            <FullModal title={newProps.title} text={newProps.text}>
+              {newProps.data}
+            </FullModal>
+          )}
 
           <Fundo
             onClick={() => {

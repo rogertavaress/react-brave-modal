@@ -1,3 +1,7 @@
 import React from 'react';
-declare const SimpleModal: React.FC;
+interface ModalProps {
+    title?: string;
+    text?: string;
+}
+declare const SimpleModal: React.FC<ModalProps>;
 export default SimpleModal;

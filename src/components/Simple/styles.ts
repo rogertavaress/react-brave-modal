@@ -14,13 +14,21 @@ const appearContentArea = keyframes`
 `;
 
 export const Content = styled.div`
+  padding: 20px;
   color: #000;
+
+  h2 {
+  }
+
+  p {
+    margin: 15px 0;
+  }
 `;
 
 export const ContentArea = styled(animated.div)`
   position: relative;
   background: white;
-  max-width: 500px;
+  width: 500px;
   max-height: 80vh;
   border-radius: 5px;
   box-sizing: border-box;

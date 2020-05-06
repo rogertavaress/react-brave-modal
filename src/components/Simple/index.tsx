@@ -5,7 +5,12 @@ import { Content, ContentArea } from './styles';
 
 import { useModal } from '../../Modal';
 
-const SimpleModal: React.FC = ({ children }) => {
+interface ModalProps {
+  title?: string;
+  text?: string;
+}
+
+const SimpleModal: React.FC<ModalProps> = ({ children, title, text }) => {
   const { closeModal } = useModal();
 
   return (
@@ -14,13 +19,8 @@ const SimpleModal: React.FC = ({ children }) => {
         <FiX size={15} />
       </button>
       <Content>
-        <p>
-          adasdasdasd asdasdas dasdasda sdadsa sdasdasdasd asdasdas dasdasdas dasdasd adasdasdasd asdasdas
-          dasdasdasdadsa sdasdasdasd asdasdas dasdasdasdasdasd adasdasdasd asdasdas dasdasdasdadsa sdasdasdasd asdasdas
-          dasdasdasdasdasd adasdasdasd asdasdas dasda sdasdadsa sdasdasdasd asdasdas dasdasd asdasdasd adasdasdasd
-          dasdasdasdadsa sdasdasdasd asdasdas dasdasdasdasdasd adasdasdasd asdasdas dasdasdasdadsa sdasdasdasd asdasdas
-          dasdasdasdasdasd
-        </p>
+        <h2>{title}</h2>
+        <p>{text}</p>
         {children}
       </Content>
     </ContentArea>

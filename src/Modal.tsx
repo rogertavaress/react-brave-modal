@@ -5,6 +5,8 @@ import ModalContainer from './components';
 export interface ModalProps {
   type?: string;
   data?: React.FC | null;
+  title?: string;
+  text?: string;
 }
 
 interface ModalContextData {
@@ -18,13 +20,13 @@ export const ModalProvider: React.FC = ({ children }) => {
   const [show, setShow] = useState(false);
   const [modal, setModal] = useState<ModalProps>({} as ModalProps);
 
-  const showModal = useCallback(({ type = '', data = null }: ModalProps) => {
-    setModal({ type, data });
+  const showModal = useCallback(({ type = 'simple', data = null, text = '', title = '' }: ModalProps) => {
+    setModal({ type, data, text, title });
     setShow(true);
   }, []);
 
   const closeModal = useCallback(() => {
-    setModal({ type: '', data: null });
+    setModal({ type: '', data: null, text: '', title: '' });
     setShow(false);
   }, []);
 

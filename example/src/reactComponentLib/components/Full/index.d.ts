@@ -1,3 +1,7 @@
 import React from 'react';
-declare const FullModal: React.FC;
+interface ModalProps {
+    title?: string;
+    text?: string;
+}
+declare const FullModal: React.FC<ModalProps>;
 export default FullModal;
