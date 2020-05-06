@@ -1,6 +1,11 @@
-# Bem-vindo ao React Brave Modal!
-![npm](https://img.shields.io/npm/dt/react-brave-modal)
-![GitHub](https://img.shields.io/github/license/rogertavaress/react-brave-modal)
+<h1 align="center">Bem-vindo ao React Brave Modal!</h1>
+<p align="center">"A mente que se abre a uma nova idéia jamais voltará ao seu tamanho original."<br>Albert Einstein</p>
+
+<p align="center">
+	<img alt="npm" src="https://img.shields.io/npm/dt/react-brave-modal">
+	<img alt="GitHub" src="https://img.shields.io/github/license/rogertavaress/react-brave-modal">
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/rogertavaress/react-brave-modal">
+</p>
 
 Oi, Sou um React Hook que faz você criar modals de forma rápida e customizável! Se você quiser aprender a usar o RBM, pode me ler. Se você quiser ajudar a melhorar o RBM, pode mandar um pull request. Depois de terminar de ler essa documentação você poderá criar modals incríveis e customizáveis com poucas linhas de código.
 
