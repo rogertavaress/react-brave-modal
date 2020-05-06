@@ -5,17 +5,17 @@ Oi, Sou um React Hook que faz você criar modals de forma rápida e customizáve
 ## Índice 
 
  - :bulb: [O que o RBM pode fazer?](#bulb-o-que-o-rbm-pode-fazer)
- - :anchor: Como instalar?
- - :space_invader: Como implementar?
- - :neckbeard: Como usar?
-	 - Propriedades do "showModal"
-		 - Type
-		 - Data
-		 - Title
-		 - Text
- - :sunglasses: Exemplos
- - :briefcase: Como contribuir?
- - :panda_face: Finalizando
+ - :anchor: [Como instalar?](#anchor-como-instalar)
+ - :space_invader: [Como implementar?](#space_invader-como-implementar)
+ - :neckbeard: [Como usar?](#neckbeard-como-usar)
+	 - [Propriedades do "showModal"](#propriedades-do-showmodal)
+		 - [Type](#type)
+		 - [Data](#data)
+		 - [Title](#title)
+		 - [Text](#text)
+ - :sunglasses: [Exemplos](#sunglasses-exemplos)
+ - :briefcase: [Como contribuir?](#briefcase-como-contribuir)
+ - :panda_face: [Finalizando](#panda_face-finalizando)
 
 ## :bulb: O que o RBM pode fazer?
 
