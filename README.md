@@ -1,4 +1,6 @@
 # Bem-vindo ao React Brave Modal!
+![npm](https://img.shields.io/npm/dt/react-brave-modal)
+![GitHub](https://img.shields.io/github/license/rogertavaress/react-brave-modal)
 
 Oi, Sou um React Hook que faz você criar modals de forma rápida e customizável! Se você quiser aprender a usar o RBM, pode me ler. Se você quiser ajudar a melhorar o RBM, pode mandar um pull request. Depois de terminar de ler essa documentação você poderá criar modals incríveis e customizáveis com poucas linhas de código.
 
@@ -107,10 +109,17 @@ Permite apenas "***string***".
 Dentro da pasta do projeto você pode encontrar uma pasta chamada "***example***", essa pasta contem um projeto base com o RBM instalado e funcionando.
 Para executar esse projeto você precisa executar os seguintes comandos no seu terminal
 
-	   https://github.com/rogertavaress/react-brave-modal.git
-	   cd react-brave-modal/example
-	   yarn
-	   yarn start
+	   # Clonar o repositório
+	   ❯ https://github.com/rogertavaress/react-brave-modal.git
+	   
+	   # Entrar no diretório
+	   ❯ cd react-brave-modal/example
+	   
+	   # Instalar as dependências
+	   ❯ yarn
+	   
+	   # Iniciar o projeto
+	   ❯ yarn start
 
 ## :briefcase: Como contribuir?
 1.  Faça o  _fork_  do projeto ([https://github.com/rogertavaress/react-brave-modal](https://github.com/rogertavaress/react-brave-modal))
