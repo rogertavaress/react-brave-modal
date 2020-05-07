@@ -1,21 +1,28 @@
-# Bem-vindo ao React Brave Modal!
+<h1 align="center">Bem-vindo ao React Brave Modal!</h1>
+<p align="center">"A mente que se abre a uma nova idéia jamais voltará ao seu tamanho original."<br>Albert Einstein</p>
+
+<p align="center">
+	<img alt="npm" src="https://img.shields.io/npm/dt/react-brave-modal">
+	<img alt="GitHub" src="https://img.shields.io/github/license/rogertavaress/react-brave-modal">
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/rogertavaress/react-brave-modal">
+</p>
 
 Oi, Sou um React Hook que faz você criar modals de forma rápida e customizável! Se você quiser aprender a usar o RBM, pode me ler. Se você quiser ajudar a melhorar o RBM, pode mandar um pull request. Depois de terminar de ler essa documentação você poderá criar modals incríveis e customizáveis com poucas linhas de código.
 
 ## Índice 
 
- - :bulb: O que o RBM pode fazer?
- - :anchor: Como instalar?
- - :space_invader: Como implementar?
- - :neckbeard: Como usar?
-	 - Propriedades do "showModal"
-		 - Type
-		 - Data
-		 - Title
-		 - Text
- - :sunglasses: Exemplos
- - :briefcase: Como contribuir?
- - :panda_face: Finalizando
+ - :bulb: [O que o RBM pode fazer?](#bulb-o-que-o-rbm-pode-fazer)
+ - :anchor: [Como instalar?](#anchor-como-instalar)
+ - :space_invader: [Como implementar?](#space_invader-como-implementar)
+ - :neckbeard: [Como usar?](#neckbeard-como-usar)
+	 - [Propriedades do "showModal"](#propriedades-do-showmodal)
+		 - [Type](#type)
+		 - [Data](#data)
+		 - [Title](#title)
+		 - [Text](#text)
+ - :sunglasses: [Exemplos](#sunglasses-exemplos)
+ - :briefcase: [Como contribuir?](#briefcase-como-contribuir)
+ - :panda_face: [Finalizando](#panda_face-finalizando)
 
 ## :bulb: O que o RBM pode fazer?
 
@@ -25,7 +32,14 @@ O RBM pode criar modals usando react hooks no ReactJS de uma forma bastante simp
 
 O primeiro passo é instalar o nosso pacote no seu package.json com o comando abaixo
 
-    npm i react-brave-modal    
+Via NPM
+```bash
+npm i react-brave-modal    
+```
+Via Yarn
+```bash
+yarn add react-brave-modal
+```
 
 ## :space_invader: Como implementar?
 
@@ -35,15 +49,15 @@ Abaixo mostro um exemplo de como fazer
 
     import React from  'react';
 	import { BrowserRouter } from  'react-router-dom';
-	**import { ModalProvider } from  'react-brave-modal';**
+	import { ModalProvider } from  'react-brave-modal'; // Importação do módulo
 	
 	import Routes from  './routes';
 
 	const  App:  React.FC  = () => (
 		<BrowserRouter>
-			**<ModalProvider>**
+			<ModalProvider> // Acrescentando o Provider por volta de todas as rotas
 				<Routes  />
-			**</ModalProvider>**
+			</ModalProvider>
 		</BrowserRouter>
 	);
 	
@@ -107,10 +121,17 @@ Permite apenas "***string***".
 Dentro da pasta do projeto você pode encontrar uma pasta chamada "***example***", essa pasta contem um projeto base com o RBM instalado e funcionando.
 Para executar esse projeto você precisa executar os seguintes comandos no seu terminal
 
-	   https://github.com/rogertavaress/react-brave-modal.git
-	   cd react-brave-modal/example
-	   yarn
-	   yarn start
+	   # Clonar o repositório
+	   ❯ https://github.com/rogertavaress/react-brave-modal.git
+	   
+	   # Entrar no diretório
+	   ❯ cd react-brave-modal/example
+	   
+	   # Instalar as dependências
+	   ❯ yarn
+	   
+	   # Iniciar o projeto
+	   ❯ yarn start
 
 ## :briefcase: Como contribuir?
 1.  Faça o  _fork_  do projeto ([https://github.com/rogertavaress/react-brave-modal](https://github.com/rogertavaress/react-brave-modal))
