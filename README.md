@@ -1,3 +1,4 @@
+<img src=".github/banner.png" alt="Banner" />
 <h1 align="center">Bem-vindo ao React Brave Modal!</h1>
 <p align="center">"A mente que se abre a uma nova idéia jamais voltará ao seu tamanho original."<br>Albert Einstein</p>
 
@@ -120,18 +121,20 @@ Permite apenas "***string***".
 ## :sunglasses: Exemplos
 Dentro da pasta do projeto você pode encontrar uma pasta chamada "***example***", essa pasta contem um projeto base com o RBM instalado e funcionando.
 Para executar esse projeto você precisa executar os seguintes comandos no seu terminal
+	   
+```bash
+# Clonar o repositório
+❯ https://github.com/rogertavaress/react-brave-modal.git
 
-	   # Clonar o repositório
-	   ❯ https://github.com/rogertavaress/react-brave-modal.git
-	   
-	   # Entrar no diretório
-	   ❯ cd react-brave-modal/example
-	   
-	   # Instalar as dependências
-	   ❯ yarn
-	   
-	   # Iniciar o projeto de exemplo
-	   ❯ yarn dev
+# Entrar no diretório
+❯ cd react-brave-modal/example
+
+# Instalar as dependências
+❯ yarn
+
+# Iniciar o projeto de exemplo
+❯ yarn dev
+```
 
 ## :briefcase: Como contribuir?
 1.  Faça o  _fork_  do projeto ([https://github.com/rogertavaress/react-brave-modal](https://github.com/rogertavaress/react-brave-modal))
