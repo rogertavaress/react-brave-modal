@@ -130,8 +130,8 @@ Para executar esse projeto você precisa executar os seguintes comandos no seu t
 	   # Instalar as dependências
 	   ❯ yarn
 	   
-	   # Iniciar o projeto
-	   ❯ yarn start
+	   # Iniciar o projeto de exemplo
+	   ❯ yarn dev
 
 ## :briefcase: Como contribuir?
 1.  Faça o  _fork_  do projeto ([https://github.com/rogertavaress/react-brave-modal](https://github.com/rogertavaress/react-brave-modal))

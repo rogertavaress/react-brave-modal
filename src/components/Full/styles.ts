@@ -3,17 +3,14 @@ import { animated } from 'react-spring';
 import appearContentArea from '../../tools/appearContentArea';
 
 export const Content = styled.div`
-  padding: 30px;
   color: #000;
-  @media (max-width: 250px) {
-    padding: 30px 15px;
-  }
 
   h2 {
+    padding: 20px 20px 0;
   }
 
   p {
-    margin: 15px 0;
+    padding: 15px 20px 20px;
   }
 `;
 

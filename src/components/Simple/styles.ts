@@ -1,17 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { animated } from 'react-spring';
-
-const appearContentArea = keyframes`
-  from {
-    top: -100vh;
-  }
-  to {
-    top: 0px;
-  }
-  leaves {
-    top: 100vh;
-  }
-`;
+import appearContentArea from '../../tools/appearContentArea';
 
 export const Content = styled.div`
   color: #000;
