@@ -121,7 +121,7 @@ Permite apenas "***string***".
 ## :sunglasses: Exemplos
 Dentro da pasta do projeto você pode encontrar uma pasta chamada "***example***", essa pasta contem um projeto base com o RBM instalado e funcionando.
 Para executar esse projeto você precisa executar os seguintes comandos no seu terminal
-
+```js
 	   # Clonar o repositório
 	   ❯ https://github.com/rogertavaress/react-brave-modal.git
 	   
@@ -133,7 +133,7 @@ Para executar esse projeto você precisa executar os seguintes comandos no seu t
 	   
 	   # Iniciar o projeto
 	   ❯ yarn start
-
+```
 ## :briefcase: Como contribuir?
 1.  Faça o  _fork_  do projeto ([https://github.com/rogertavaress/react-brave-modal](https://github.com/rogertavaress/react-brave-modal))
 2.  Crie uma  _branch_  para sua modificação (`git checkout -b feature/fooBar`)
