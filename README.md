@@ -1,3 +1,4 @@
+<img src=".github/banner.png" alt="Banner" />
 <h1 align="center">Bem-vindo ao React Brave Modal!</h1>
 <p align="center">"A mente que se abre a uma nova idéia jamais voltará ao seu tamanho original."<br>Albert Einstein</p>
 
