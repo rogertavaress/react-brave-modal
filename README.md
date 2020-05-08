@@ -6,6 +6,7 @@
 	<img alt="npm" src="https://img.shields.io/npm/dt/react-brave-modal">
 	<img alt="GitHub" src="https://img.shields.io/github/license/rogertavaress/react-brave-modal">
 	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/rogertavaress/react-brave-modal">
+	<img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/rogertavaress/react-brave-modal/master?label=version">
 </p>
 
 Oi, Sou um React Hook que faz você criar modals de forma rápida e customizável! Se você quiser aprender a usar o RBM, pode me ler. Se você quiser ajudar a melhorar o RBM, pode mandar um pull request. Depois de terminar de ler essa documentação você poderá criar modals incríveis e customizáveis com poucas linhas de código.
@@ -48,21 +49,23 @@ Primeiramente você precisa saber que o RBM funciona de forma global na sua apli
 Normalmente eu coloco por volta de todas as rotas para que fique mais fácil de mostrar um modal sempre que você precisar.
 Abaixo mostro um exemplo de como fazer
 
-    import React from  'react';
-	import { BrowserRouter } from  'react-router-dom';
-	import { ModalProvider } from  'react-brave-modal'; // Importação do módulo
-	
-	import Routes from  './routes';
+```ts
+import React from  'react';
+import { BrowserRouter } from  'react-router-dom';
+import { ModalProvider } from  'react-brave-modal'; // Importação do módulo
 
-	const  App:  React.FC  = () => (
-		<BrowserRouter>
-			<ModalProvider> // Acrescentando o Provider por volta de todas as rotas
-				<Routes  />
-			</ModalProvider>
-		</BrowserRouter>
-	);
-	
-	export  default  App;
+import Routes from  './routes';
+
+const  App:  React.FC  = () => (
+	<BrowserRouter>
+		<ModalProvider> // Acrescentando o Provider por volta de todas as rotas
+			<Routes  />
+		</ModalProvider>
+	</BrowserRouter>
+);
+
+export  default  App;
+```
 
 ## :neckbeard: Como usar?
 
@@ -73,35 +76,37 @@ Se não, recomento que você leia um pouco sobre [React-hooks](https://pt-br.rea
 Continuando, você precisa importar o "*useModal*" para poder usar o "*showModal*" e o "*stopModal*" dentro do seu componente.
 Abaixo mostro um exemplo de como fazer
 
-    import React from 'react';
+```ts
+import React from 'react';
 
-	import { useModal } from 'react-brave-modal';
+import { useModal } from 'react-brave-modal';
 
-	const Home: React.FC = () => {
-	  const { showModal } = useModal();
+const Home: React.FC = () => {
+	const { showModal } = useModal();
 
-	  return (
-	  <>
-	    <h1>React Brave Modal</h1>
-	    <div>
-	      <button 
-		      type="button" 
-		      onClick={() => showModal(
-			    { 
-				  type:'simple', 
-				  title: 'Meu Título Bonitão', 
-				  text: 'Meu texto legal'
-				}
+	return (
+	<>
+		<h1>React Brave Modal</h1>
+		<div>
+			<button 
+				type="button" 
+				onClick={() => showModal(
+					{ 
+						type:'simple', 
+						title: 'Meu Título Bonitão', 
+						text: 'Meu texto legal'
+					}
 				)
-			  }>
-				  Show Simple
-			  </button>
-	    </div>
-	  </>
-	  );
-	};
+			}>
+				Show Simple
+			</button>
+		</div>
+	</>
+	);
+};
 
-	export default Home;
+export default Home;
+```
 
 ### Propriedades do "showModal"
 
@@ -127,7 +132,7 @@ Para executar esse projeto você precisa executar os seguintes comandos no seu t
 ❯ https://github.com/rogertavaress/react-brave-modal.git
 
 # Entrar no diretório
-❯ cd react-brave-modal/example
+❯ cd react-brave-modal
 
 # Instalar as dependências
 ❯ yarn
@@ -138,9 +143,9 @@ Para executar esse projeto você precisa executar os seguintes comandos no seu t
 
 ## :briefcase: Como contribuir?
 1.  Faça o  _fork_  do projeto ([https://github.com/rogertavaress/react-brave-modal](https://github.com/rogertavaress/react-brave-modal))
-2.  Crie uma  _branch_  para sua modificação (`git checkout -b feature/fooBar`)
+2.  Crie uma  _branch_  para sua modificação (`git checkout -b feature/meu-modal`)
 3.  Faça o  _commit_  (`git commit -am 'Add some fooBar'`)
-4.  _Push_  (`git push origin feature/fooBar`)
+4.  _Push_  (`git push origin feature/meu-modal`)
 5.  Crie um novo  _Pull Request_
 
 ## :panda_face: Finalizando
