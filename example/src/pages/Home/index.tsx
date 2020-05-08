@@ -1,6 +1,7 @@
 import React from 'react';
 
 import PayHappy from '../../components/PayHappy';
+import Subscribe from '../../components/Subscribe';
 
 import { Container } from './styles';
 
@@ -20,7 +21,7 @@ const Home: React.FC = () => {
     <h2>Custom</h2>
     <div>
       <button type="button" onClick={()=>showModal({ data: PayHappy, type:'simple'})}>Show Simple - PayHappy</button>
-      <button type="button" onClick={()=>showModal({ data: PayHappy, type:'full'})}>Show Full</button>
+      <button type="button" onClick={()=>showModal({ data: Subscribe, type:'full'})}>Show Full</button>
     </div>
   </Container>);
 };

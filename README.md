@@ -129,7 +129,7 @@ Para executar esse projeto você precisa executar os seguintes comandos no seu t
 	   
 ```bash
 # Clonar o repositório
-❯ https://github.com/rogertavaress/react-brave-modal.git
+❯ git clone https://github.com/rogertavaress/react-brave-modal.git
 
 # Entrar no diretório
 ❯ cd react-brave-modal
