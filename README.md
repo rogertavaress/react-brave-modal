@@ -49,7 +49,7 @@ Primeiramente você precisa saber que o RBM funciona de forma global na sua apli
 Normalmente eu coloco por volta de todas as rotas para que fique mais fácil de mostrar um modal sempre que você precisar.
 Abaixo mostro um exemplo de como fazer
 
-```ts
+```tsx
 import React from  'react';
 import { BrowserRouter } from  'react-router-dom';
 import { ModalProvider } from  'react-brave-modal'; // Importação do módulo
@@ -58,7 +58,7 @@ import Routes from  './routes';
 
 const  App:  React.FC  = () => (
 	<BrowserRouter>
-		<ModalProvider> // Acrescentando o Provider por volta de todas as rotas
+		<ModalProvider> {/* Acrescentando o Provider por volta de todas as rotas*/}
 			<Routes  />
 		</ModalProvider>
 	</BrowserRouter>
@@ -76,7 +76,7 @@ Se não, recomento que você leia um pouco sobre [React-hooks](https://pt-br.rea
 Continuando, você precisa importar o "*useModal*" para poder usar o "*showModal*" e o "*stopModal*" dentro do seu componente.
 Abaixo mostro um exemplo de como fazer
 
-```ts
+```tsx
 import React from 'react';
 
 import { useModal } from 'react-brave-modal';
