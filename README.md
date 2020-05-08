@@ -85,7 +85,7 @@ const Home: React.FC = () => {
 	const { showModal } = useModal();
 
 	return (
-	<>
+		<>
 		<h1>React Brave Modal</h1>
 		<div>
 			<button 
@@ -140,6 +140,7 @@ Para executar esse projeto você precisa executar os seguintes comandos no seu t
 # Iniciar o projeto de exemplo
 ❯ yarn dev
 ```
+<img src=".github/preview.gif" alt="Preview" />
 
 ## :briefcase: Como contribuir?
 1.  Faça o  _fork_  do projeto ([https://github.com/rogertavaress/react-brave-modal](https://github.com/rogertavaress/react-brave-modal))

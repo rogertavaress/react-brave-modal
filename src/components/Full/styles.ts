@@ -34,6 +34,7 @@ export const ContentArea = styled(animated.div)`
     cursor: pointer;
     justify-content: center;
     align-items: center;
+    z-index: 9999;
 
     svg {
       color: rgba(0, 0, 0, 0.7);

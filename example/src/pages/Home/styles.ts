@@ -7,13 +7,13 @@ export const Container = styled.div`
   flex-direction: column;
   height: 100vh;
 
-  h1 {
-    margin-bottom:20px;
+  img {
+    margin-bottom: 40px;
   }
 
   h2 {
     margin-top: 30px;
-    margin-bottom:15px;
+    margin-bottom: 15px;
   }
 
   div {
@@ -24,11 +24,11 @@ export const Container = styled.div`
     }
 
     button {
-      background: #Ff9000;
+      background: #ff9000;
       border: 0;
       border-radius: 5px;
       padding: 10px 20px;
       color: #fff;
-  }
+    }
   }
 `;
