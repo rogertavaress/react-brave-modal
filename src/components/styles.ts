@@ -14,6 +14,21 @@ export const Container = styled.div`
   div {
     z-index: 1;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong {
+    font-weight: 500;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
 `;
 
 export const Fundo = styled.button`
