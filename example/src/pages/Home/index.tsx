@@ -13,6 +13,7 @@ const Home: React.FC = () => {
   const {showModal} = useModal();
 
   return (
+    <>
   <Container>
     <img src={logo} alt="React Brave Modal" />
     <h2>Simple</h2>
@@ -25,7 +26,30 @@ const Home: React.FC = () => {
       <button type="button" onClick={()=>showModal({ data: PayHappy, type:'simple'})}>Show Simple - PayHappy</button>
       <button type="button" onClick={()=>showModal({ data: Subscribe, type:'full'})}>Show Full - Subscribe</button>
     </div>
-  </Container>);
+  </Container>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+   </>);
 };
 
 export default Home;

@@ -7,9 +7,10 @@ export const Container = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 9999;
 
   div {
     z-index: 1;
@@ -32,13 +33,10 @@ export const Container = styled.div`
 `;
 
 export const Fundo = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   animation: ${appearContainer} 0.2s;

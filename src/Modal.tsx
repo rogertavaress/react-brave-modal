@@ -35,8 +35,8 @@ export const ModalProvider: React.FC = ({ children }) => {
 
   return (
     <ModalContext.Provider value={{ showModal, closeModal }}>
-      {children}
       <ModalContainer newProps={modal} show={show} data={data} />
+      {children}
     </ModalContext.Provider>
   );
 };
