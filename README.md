@@ -52,16 +52,18 @@ Abaixo mostro um exemplo de como fazer
 ```tsx
 import React from  'react';
 import { BrowserRouter } from  'react-router-dom';
-import { ModalProvider } from  'react-brave-modal'; // Importação do módulo
+// Importação do módulo
+import { ModalProvider } from  'react-brave-modal';
 
 import Routes from  './routes';
 
 const  App:  React.FC  = () => (
 	<BrowserRouter>
-		<ModalProvider> {/* Acrescentando o Provider por volta de todas as rotas*/}
-			<Routes  />
-		</ModalProvider>
-	</BrowserRouter>
+		{/* Acrescentando o Provider por volta de todas as rotas*/}
+    <ModalProvider>
+      <Routes  />
+    </ModalProvider>
+  </BrowserRouter>
 );
 
 export  default  App;
@@ -73,7 +75,7 @@ Pronto! Chegamos na parte mais legal dessa documentação.
 Se você já conhece React-hooks será a coisa mais simples que você já fez.
 Se não, recomento que você leia um pouco sobre [React-hooks](https://pt-br.reactjs.org/docs/hooks-intro.html) antes de continuar.
 
-Continuando, você precisa importar o "*useModal*" para poder usar o "*showModal*" e o "*stopModal*" dentro do seu componente.
+Continuando, você precisa importar o "*useModal*" para poder usar o "*showModal*" e o "*closeModal*" dentro do seu componente.
 Abaixo mostro um exemplo de como fazer
 
 ```tsx
