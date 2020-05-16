@@ -58,8 +58,8 @@ import { ModalProvider } from  'react-brave-modal';
 import Routes from  './routes';
 
 const  App:  React.FC  = () => (
-	<BrowserRouter>
-		{/* Acrescentando o Provider por volta de todas as rotas*/}
+  <BrowserRouter>
+    {/* Acrescentando o Provider por volta de todas as rotas*/}
     <ModalProvider>
       <Routes  />
     </ModalProvider>
@@ -84,27 +84,27 @@ import React from 'react';
 import { useModal } from 'react-brave-modal';
 
 const Home: React.FC = () => {
-	const { showModal } = useModal();
+  const { showModal } = useModal();
 
-	return (
-		<>
-		<h1>React Brave Modal</h1>
-		<div>
-			<button 
-				type="button" 
-				onClick={() => showModal(
-					{ 
-						type:'simple', 
-						title: 'Meu Título Bonitão', 
-						text: 'Meu texto legal'
-					}
-				)
-			}>
-				Show Simple
-			</button>
-		</div>
-	</>
-	);
+  return (
+  <>
+    <h1>React Brave Modal</h1>
+    <div>
+    <button 
+      type="button" 
+      onClick={() => showModal(
+        { 
+          type:'simple', 
+          title: 'Meu Título Bonitão', 
+          text: 'Meu texto legal'
+        }
+      )
+      }>
+      Show Simple
+    </button>
+    </div>
+  </>
+  );
 };
 
 export default Home;
