@@ -10,7 +10,7 @@ import { Container, Fundo } from './styles';
 interface ModelContainerProps {
   newProps: ModalProps;
   show: boolean;
-  data: React.FC;
+  data: JSX.Element;
 }
 
 const ModelContainer: React.FC<ModelContainerProps> = ({ newProps, show, data }) => {

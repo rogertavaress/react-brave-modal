@@ -27,28 +27,6 @@ const Home: React.FC = () => {
       <button type="button" onClick={()=>showModal({ data: Subscribe, type:'full'})}>Show Full - Subscribe</button>
     </div>
   </Container>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
    </>);
 };
 

@@ -7,7 +7,7 @@ export interface ModalProps {
   type?: string;
   title?: string;
   text?: string;
-  data?: React.FC<any>;
+  data?: JSX.Element;
 }
 
 interface ModalContextData {
@@ -20,16 +20,16 @@ const ModalContext = createContext<ModalContextData>({} as ModalContextData);
 export const ModalProvider: React.FC = ({ children }) => {
   const [show, setShow] = useState(false);
   const [modal, setModal] = useState<ModalProps>({} as ModalProps);
-  const [data, setData] = useState<React.FC>(Empty);
+  const [data, setData] = useState<JSX.Element>(<Empty />);
 
-  const showModal = useCallback(({ type = 'simple', data = Empty, text = '', title = '' }: ModalProps) => {
+  const showModal = useCallback(({ type = 'simple', data = <Empty />, text = '', title = '' }: ModalProps) => {
     setModal({ type, text, title });
     setShow(true);
     setData(data);
   }, []);
 
   const closeModal = useCallback(() => {
-    setModal({ type: '', data: Empty, text: '', title: '' });
+    setModal({ type: '', data: <Empty />, text: '', title: '' });
     setShow(false);
   }, []);
 
