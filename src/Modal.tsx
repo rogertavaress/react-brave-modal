@@ -7,7 +7,7 @@ export interface ModalProps {
   type?: string;
   title?: string;
   text?: string;
-  data?: React.FC;
+  data?: React.FC<any>;
 }
 
 interface ModalContextData {
