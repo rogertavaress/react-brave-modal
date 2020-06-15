@@ -117,7 +117,7 @@ export default Home;
 Têm como valores permitidos: "***simple***" e "***full***".
 #### Data
 Essa propriedade deve ser usada quando você precisar colocar um componente dentro do modal.
-Permite apenas Componentes do tipo "***React.FC***".
+Permite apenas Componentes do tipo "***JSX.Element***".
 #### Title
 Essa propriedade deve ser usada quando você quiser usar um titulo dentro do seu modal.
 Permite apenas "***string***".
