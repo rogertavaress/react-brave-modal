@@ -4,7 +4,7 @@ import ModalContainer from './components';
 import Empty from './components/Empty';
 
 export interface ModalProps {
-  type?: string;
+  type?: 'simple' | 'full' | 'custom' | '';
   title?: string;
   text?: string;
   data?: JSX.Element;

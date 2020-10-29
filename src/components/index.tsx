@@ -2,6 +2,7 @@ import React from 'react';
 
 import SimpleModal from './Simple';
 import FullModal from './Full';
+import CustomModal from './Custom';
 
 import { ModalProps, useModal } from '../Modal';
 
@@ -29,6 +30,11 @@ const ModelContainer: React.FC<ModelContainerProps> = ({ newProps, show, data })
             <FullModal title={newProps.title} text={newProps.text}>
               {data}
             </FullModal>
+          )}
+          {newProps.type === 'custom' && (
+            <CustomModal title={newProps.title} text={newProps.text}>
+              {data}
+            </CustomModal>
           )}
 
           <Fundo

@@ -23,8 +23,13 @@ const Home: React.FC = () => {
     </div>
     <h2>Custom</h2>
     <div>
-      <button type="button" onClick={()=>showModal({ data: PayHappy, type:'simple'})}>Show Simple - PayHappy</button>
-      <button type="button" onClick={()=>showModal({ data: Subscribe, type:'full'})}>Show Full - Subscribe</button>
+      <button type="button" onClick={()=>showModal({ data: <PayHappy />, type:'simple'})}>Show Simple - PayHappy</button>
+      <button type="button" onClick={()=>showModal({ data: <Subscribe />, type:'full'})}>Show Full - Subscribe</button>
+    </div>
+    <h2>Type: Custom </h2>
+    <div>
+      <button type="button" onClick={()=>showModal({ data: <PayHappy />, type:'custom'})}>Show - PayHappy</button>
+      <button type="button" onClick={()=>showModal({ data: <Subscribe />, type:'custom'})}>Show - Subscribe</button>
     </div>
   </Container>
    </>);
