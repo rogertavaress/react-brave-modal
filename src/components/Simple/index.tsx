@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { FiX } from 'react-icons/fi';
 
 import { Content, ContentArea } from './styles';
 
 import { useModal } from '../../Modal';
 
-interface ModalProps {
-  title?: string;
-  text?: string;
-}
+import { ModalProps } from '../../@types';
 
-const SimpleModal: React.FC<ModalProps> = ({ children, title, text }) => {
+const SimpleModal: React.FC<ModalProps> = ({ children, title, text, closeAction, closeActionSync }) => {
   const { closeModal } = useModal();
+
+  const handleClose = useCallback(() => {
+    if (closeAction) {
+      closeAction();
+    }
+    if (closeActionSync) {
+      closeActionSync();
+    }
+    closeModal();
+  }, []);
 
   return (
     <ContentArea>
-      <button type="button" onClick={() => closeModal()}>
+      <button type="button" onClick={handleClose}>
         <FiX size={15} />
       </button>
       <Content>
