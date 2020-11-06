@@ -1,17 +1,16 @@
 import React, { createContext, useContext, useCallback, useState } from 'react';
+import { ModalProps } from './@types';
 
 import ModalContainer from './components';
 import Empty from './components/Empty';
 
-export interface ModalProps {
+export interface ModalPropsGlobal extends ModalProps {
   type?: 'simple' | 'full' | 'custom' | '';
-  title?: string;
-  text?: string;
   data?: JSX.Element;
 }
 
 interface ModalContextData {
-  showModal(data: ModalProps): void;
+  showModal(data: ModalPropsGlobal): void;
   closeModal(): void;
 }
 
@@ -19,17 +18,27 @@ const ModalContext = createContext<ModalContextData>({} as ModalContextData);
 
 export const ModalProvider: React.FC = ({ children }) => {
   const [show, setShow] = useState(false);
-  const [modal, setModal] = useState<ModalProps>({} as ModalProps);
+  const [modal, setModal] = useState<ModalPropsGlobal>({} as ModalPropsGlobal);
   const [data, setData] = useState<JSX.Element>(<Empty />);
 
-  const showModal = useCallback(({ type = 'simple', data = <Empty />, text = '', title = '' }: ModalProps) => {
-    setModal({ type, text, title });
-    setShow(true);
-    setData(data);
-  }, []);
+  const showModal = useCallback(
+    ({ type = 'simple', data = <Empty />, text = '', title = '', closeAction, closeActionSync }: ModalPropsGlobal) => {
+      setModal({ type, text, title, closeAction, closeActionSync });
+      setShow(true);
+      setData(data);
+    },
+    [],
+  );
 
   const closeModal = useCallback(() => {
-    setModal({ type: '', data: <Empty />, text: '', title: '' });
+    setModal({
+      type: '',
+      data: <Empty />,
+      text: '',
+      title: '',
+      closeAction: undefined,
+      closeActionSync: undefined,
+    });
     setShow(false);
   }, []);
 
