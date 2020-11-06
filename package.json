@@ -1,6 +1,6 @@
 {
   "name": "react-brave-modal",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React Brave Modal is a react hook that shows modals on the screen in an easy way.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

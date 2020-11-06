@@ -10,9 +10,9 @@ import { ModalProps } from '../../@types';
 const SimpleModal: React.FC<ModalProps> = ({ children, title, text, closeAction, closeActionSync }) => {
   const { closeModal } = useModal();
 
-  const handleClose = useCallback(() => {
+  const handleClose = useCallback(async () => {
     if (closeAction) {
-      closeAction();
+      await closeAction();
     }
     if (closeActionSync) {
       closeActionSync();
