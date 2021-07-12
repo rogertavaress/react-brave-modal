@@ -22,8 +22,16 @@ export const ModalProvider: React.FC = ({ children }) => {
   const [data, setData] = useState<JSX.Element>(<Empty />);
 
   const showModal = useCallback(
-    ({ type = 'simple', data = <Empty />, text = '', title = '', closeAction, closeActionSync }: ModalPropsGlobal) => {
-      setModal({ type, text, title, closeAction, closeActionSync });
+    ({
+      type = 'simple',
+      data = <Empty />,
+      text = '',
+      title = '',
+      closeAction,
+      closeActionSync,
+      canCloseWithNativeMode = true,
+    }: ModalPropsGlobal) => {
+      setModal({ type, text, title, closeAction, closeActionSync, canCloseWithNativeMode });
       setShow(true);
       setData(data);
     },
@@ -38,8 +46,10 @@ export const ModalProvider: React.FC = ({ children }) => {
       title: '',
       closeAction: undefined,
       closeActionSync: undefined,
+      canCloseWithNativeMode: true,
     });
     setShow(false);
+    setData(<Empty />);
   }, []);
 
   return (

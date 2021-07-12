@@ -27,6 +27,7 @@ const ModelContainer: React.FC<ModelContainerProps> = ({ newProps, show, data })
               text={newProps.text}
               closeAction={newProps.closeAction}
               closeActionSync={newProps.closeActionSync}
+              canCloseWithNativeMode={newProps.canCloseWithNativeMode}
             >
               {data}
             </SimpleModal>
@@ -37,6 +38,7 @@ const ModelContainer: React.FC<ModelContainerProps> = ({ newProps, show, data })
               text={newProps.text}
               closeAction={newProps.closeAction}
               closeActionSync={newProps.closeActionSync}
+              canCloseWithNativeMode={newProps.canCloseWithNativeMode}
             >
               {data}
             </FullModal>
@@ -47,6 +49,7 @@ const ModelContainer: React.FC<ModelContainerProps> = ({ newProps, show, data })
               text={newProps.text}
               closeAction={newProps.closeAction}
               closeActionSync={newProps.closeActionSync}
+              canCloseWithNativeMode={newProps.canCloseWithNativeMode}
             >
               {data}
             </CustomModal>
@@ -54,13 +57,15 @@ const ModelContainer: React.FC<ModelContainerProps> = ({ newProps, show, data })
 
           <Fundo
             onClick={() => {
-              if (newProps.closeAction) {
-                newProps.closeAction();
+              if (newProps.canCloseWithNativeMode) {
+                if (newProps.closeAction) {
+                  newProps.closeAction();
+                }
+                if (newProps.closeActionSync) {
+                  newProps.closeActionSync();
+                }
+                closeModal();
               }
-              if (newProps.closeActionSync) {
-                newProps.closeActionSync();
-              }
-              closeModal();
             }}
           ></Fundo>
         </Container>

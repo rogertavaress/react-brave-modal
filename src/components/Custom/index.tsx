@@ -7,24 +7,35 @@ import { useModal } from '../../Modal';
 
 import { ModalProps } from '../../@types';
 
-const FullModal: React.FC<ModalProps> = ({ children, title, text, closeAction, closeActionSync }) => {
+const FullModal: React.FC<ModalProps> = ({
+  children,
+  title,
+  text,
+  closeAction,
+  closeActionSync,
+  canCloseWithNativeMode,
+}) => {
   const { closeModal } = useModal();
 
   const handleClose = useCallback(async () => {
-    if (closeAction) {
-      await closeAction();
+    if (canCloseWithNativeMode) {
+      if (closeAction) {
+        await closeAction();
+      }
+      if (closeActionSync) {
+        closeActionSync();
+      }
+      closeModal();
     }
-    if (closeActionSync) {
-      closeActionSync();
-    }
-    closeModal();
   }, []);
 
   return (
     <ContentArea>
-      <button type="button" onClick={handleClose}>
-        <FiX size={20} />
-      </button>
+      {canCloseWithNativeMode && (
+        <button type="button" onClick={handleClose}>
+          <FiX size={20} />
+        </button>
+      )}
       <Content>
         {title && <h2>{title}</h2>}
         {text && <p>{text}</p>}

@@ -3,4 +3,5 @@ export interface ModalProps {
   text?: string;
   closeAction?: () => Promise<void>;
   closeActionSync?: () => void;
+  canCloseWithNativeMode?: boolean;
 }
